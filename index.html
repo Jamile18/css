@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Tecnologia</title>
+
+```
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f2f4f7;
+        color: #222;
+    }
+
+    header {
+        background-color: #1f2937;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0 0 15px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    main {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 0 20px;
+    }
+
+    article {
+        background-color: white;
+        padding: 25px;
+        margin-bottom: 25px;
+        border-radius: 10px;
+    }
+
+    article img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    aside {
+        max-width: 700px;
+        margin: 30px auto;
+        padding: 30px;
+        background-color: white;
+        border-radius: 12px;
+    }
+
+    aside h2 {
+        text-align: center;
+        margin-top: 0;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    fieldset {
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        padding: 20px;
+    }
+
+    legend {
+        font-weight: bold;
+        padding: 0 8px;
+    }
+
+    .campos-principais {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .campo {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        flex: 1;
+    }
+
+    label {
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    input,
+    select {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #b8bec7;
+        border-radius: 6px;
+        font-size: 16px;
+        background-color: white;
+    }
+
+    input:focus,
+    select:focus {
+        outline: 2px solid #2563eb;
+        border-color: #2563eb;
+    }
+
+    .campo-individual {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 15px;
+    }
+
+    .checkbox {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 15px;
+    }
+
+    .checkbox input {
+        width: auto;
+    }
+
+    button {
+        background-color: #2563eb;
+        color: white;
+        padding: 14px 20px;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #1d4ed8;
+    }
+
+    footer {
+        background-color: #1f2937;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+        .campos-principais {
+            flex-direction: column;
+        }
+
+        nav {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        aside {
+            margin: 20px;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<header>
+    <h1>Blog de Tecnologia</h1>
+
+    <nav>
+        <a href="#programacao">Programação</a>
+        <a href="#ia">Inteligência Artificial</a>
+        <a href="#inscricao">Inscrição</a>
+    </nav>
+</header>
+
+<main>
+
+    <article id="programacao">
+        <h2>Programação</h2>
+
+        <p>
+            A programação permite criar sites, aplicativos e sistemas,
+            sendo uma área fundamental para o desenvolvimento de soluções
+            tecnológicas.
+        </p>
+
+        <img
+            src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=800&q=80"
+            alt="Pessoa programando em um computador"
+        >
+    </article>
+
+    <article id="ia">
+        <h2>Inteligência Artificial</h2>
+
+        <p>
+            A Inteligência Artificial utiliza algoritmos e dados para
+            realizar tarefas que podem envolver reconhecimento de padrões,
+            análise de informações e geração de conteúdo.
+        </p>
+
+        <img
+            src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"
+            alt="Representação de Inteligência Artificial"
+        >
+    </article>
+
+</main>
+
+<aside id="inscricao">
+
+    <h2>Inscreva-se no blog</h2>
+
+    <form method="get">
+
+        <fieldset>
+
+            <legend>Dados pessoais</legend>
+
+            <div class="campos-principais">
+
+                <div class="campo">
+                    <label for="nome">Nome:</label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        minlength="3"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail:</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                    >
+                </div>
+
+            </div>
+
+            <div class="campo-individual">
+
+                <label for="idade">Idade:</label>
+
+                <input
+                    type="number"
+                    id="idade"
+                    name="idade"
+                    min="18"
+                    max="120"
+                    required
+                >
+
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Preferências</legend>
+
+            <div class="campo">
+
+                <label for="assunto">Assunto:</label>
+
+                <select
+                    id="assunto"
+                    name="assunto"
+                    required
+                >
+                    <option value="">Selecione um assunto</option>
+                    <option value="programacao">Programação</option>
+                    <option value="inteligencia-artificial">
+                        Inteligência Artificial
+                    </option>
+                    <option value="tecnologia">
+                        Tecnologia
+                    </option>
+                </select>
+
+            </div>
+
+            <div class="checkbox">
+
+                <input
+                    type="checkbox"
+                    id="termos"
+                    name="termos"
+                    value="aceito"
+                    required
+                >
+
+                <label for="termos">
+                    Aceito os termos
+                </label>
+
+            </div>
+
+        </fieldset>
+
+        <button type="submit">
+            Enviar inscrição
+        </button>
+
+    </form>
+
+</aside>
+
+<footer>
+    <p>&copy; 2026 - Blog de Tecnologia</p>
+</footer>
+```
+
+</body>
+</html>
